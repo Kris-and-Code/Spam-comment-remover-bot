@@ -1,0 +1,14 @@
+.formstyle {
+
+    
+    padding-block-start: 15px;
+    vertical-align:middle;
+    height: 100%;
+
+}
+
+.urlstyle {
+    padding-left: 15px;
+    vertical-align: middle;
+    position: inherit;
+}
