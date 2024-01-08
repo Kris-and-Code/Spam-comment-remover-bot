@@ -30,7 +30,7 @@ interface FormData {
     return (
       <div className='formstyle'>
         <span className='row'>
-          <div className='col-4'> {/* Added hyphen for valid class name */}
+          <div className='col-4'> 
             <form onSubmit={handleSubmit}>
               <label htmlFor="youtubeUrl">YouTube URL:</label>
               <div className='urlstyle'>
@@ -40,14 +40,14 @@ interface FormData {
                   value={formData.youtubeUrl}
                   onChange={(e) => {
                     setFormData({ ...formData, youtubeUrl: e.target.value });
-                    setVideoPreviewVisible(); // Call the correct function
+                    setVideoPreviewVisible(); 
                   }}
                 />
                 {formData.youtubeUrl && formData.videoPreviewVisible && (
                   <YouTube
                     videoId={getYouTubeVideoId(formData.youtubeUrl)}
                     opts={{
-                      // Customize preview options as needed
+                      
                       width: '560',
                       height: '315',
                       playerVars: {
@@ -62,7 +62,7 @@ interface FormData {
             </form>
           </div>
   
-          <div className='col-8'> {/* Added hyphen for valid class name */}
+          <div className='col-8'> 
             Youtube video preview
           </div>
         </span>
