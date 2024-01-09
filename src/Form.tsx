@@ -14,7 +14,7 @@ interface FormData {
   const Form: React.FC = () => {
     const [formData, setFormData] = useState<FormData>({
       youtubeUrl: '',
-      videoPreviewVisible: false,
+    
     });
   
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -23,9 +23,7 @@ interface FormData {
       // Here comes the on submit action  ie, video preview and user authentication
     };
   
-    const setVideoPreviewVisible = () => { // Defined missing function
-      setFormData({ ...formData, videoPreviewVisible: true });
-    };
+    
   
     return (
       <div className='formstyle'>
@@ -34,28 +32,8 @@ interface FormData {
             <form onSubmit={handleSubmit}>
               <label htmlFor="youtubeUrl">YouTube URL:</label>
               <div className='urlstyle'>
-                <input
-                  type="url"
-                  id="youtubeUrl"
-                  value={formData.youtubeUrl}
-                  onChange={(e) => {
-                    setFormData({ ...formData, youtubeUrl: e.target.value });
-                    setVideoPreviewVisible(); 
-                  }}
-                />
-                {formData.youtubeUrl && formData.videoPreviewVisible && (
-                  <YouTube
-                    videoId={getYouTubeVideoId(formData.youtubeUrl)}
-                    opts={{
-                      
-                      width: '560',
-                      height: '315',
-                      playerVars: {
-                        autoplay: 0,
-                      },
-                    }}
-                  />
-                )}
+                
+                
                 <br />
                 <button type="submit">Submit</button>
               </div>
