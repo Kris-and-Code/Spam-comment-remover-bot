@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import YouTube from 'react-youtube';
 import './Form.css';
+import ThumbnailGenerator from './YouTube';
 
 interface FormData {
     youtubeUrl: string;
@@ -32,7 +33,10 @@ interface FormData {
             <form onSubmit={handleSubmit}>
               <label htmlFor="youtubeUrl">YouTube URL:</label>
               <div className='urlstyle'>
-                
+              <div className="App">
+      <h1>YouTube Thumbnail Generator</h1>
+      <ThumbnailGenerator />
+    </div>
                 
                 <br />
                 <button type="submit">Submit</button>
