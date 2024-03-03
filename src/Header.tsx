@@ -1,27 +1,15 @@
 import React from 'react';
-import logo from './youtube-logo-2431.svg'
-
-
-
+import logo from './youtube-logo-2431.svg';
 import './Header.css';
 
 const Header: React.FC = () => {
-  return(
-      <div className='container-fluid' > 
-       <div className='row'> 
-            <div className="col-sm-2">
-                <img className='logo' src={logo} />
-            </div>
-            <div className="col-sm-4">
-                <span className='text'> 
-                <h1>YouTube Spam Comment </h1>
-                <h1> Remover Tool</h1>
-                </span>
-                
-                
-            </div>
+  return (
+    <header className="header">
+      <div className="header-logo">
+        <img src={logo} alt="YouTube Logo" />
+        <h1 className="header-text">YouTube Spam Comment Remover Tool</h1>
       </div>
-      </div> 
+    </header>
   );
 };
 
